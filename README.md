@@ -57,3 +57,51 @@ sign_up_screen.dart
 - 부모의 크기에 비례해서 크기를 정하게 해주는 Box 위젯
   - ex) 부모의 크기가 1000px이고, FractionallySizedBox의 widthFactor가 1이라면 FractionallySizedBox의 너비는 부모의 너비의 100%가 된다.
   - ex) 부모의 크기가 1000px이고, FractionallySizedBox의 widthFactor가 0.5이라면 FractionallySizedBox의 너비는 부모의 너비의 50%가 된다.
+
+# fontAwsome 설치
+
+`dependencies: font_awesome_flutter: 10.3.0`
+
+# Expanded 위젯
+
+- 사용할 수 있는 모든 공간을 사용한다.
+
+```dart
+Expanded(
+              child: Text(
+                text,
+                style: const TextStyle(
+                    fontSize: Sizes.size16, fontWeight: FontWeight.w800),
+                textAlign: TextAlign.center,
+              ),
+            ),
+```
+
+# Stack 위젯
+
+- 위젯들을 위에다가 쌓을 수 있게 한다.
+  - 즉, 요소들이 서로 겹치는걸 허용한다.
+
+## Stack의 Align 위젯
+
+- stack에 있는 Widget 하나의 정렬만 바꿀 수 있게 해준다.
+
+```dart
+child: Stack(
+          alignment: Alignment.center,
+          children: [
+             Align(
+              alignment: Alignment.centerLeft,
+              child: icon,
+            ),
+            Expanded(
+              child: Text(
+                text,
+                style: const TextStyle(
+                    fontSize: Sizes.size16, fontWeight: FontWeight.w800),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+```
