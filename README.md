@@ -128,3 +128,11 @@ TextField(
 
 - 코드, 메서드 등으로 위젯을 컨트롤 할 수 있게 해준다.
   - statefulWidget에서 사용한다.
+
+# AnimatedDefaultTextStyle
+
+- 텍스트가 바뀔 때 에니메이션 효과를 준다.
+
+# dispose
+
+- 컨트롤러 객체가 제거될 때 변수에 할당 된 메모리를 해제하기 위해 사용한다.
