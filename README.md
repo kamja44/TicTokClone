@@ -105,3 +105,8 @@ child: Stack(
           ],
         ),
 ```
+
+# dart에서 메서드를 private으로 선언하는 방법
+
+- 메서드의 이름 앞에 \_를 달아준다.
+  - dart에는 public, private, protected와 같은 접근 제한자가 없기 때문이다.
