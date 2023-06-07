@@ -110,3 +110,21 @@ child: Stack(
 
 - 메서드의 이름 앞에 \_를 달아준다.
   - dart에는 public, private, protected와 같은 접근 제한자가 없기 때문이다.
+
+# TextField
+
+- 유저가 문자를 입력할 수 있는 위젯이다.
+
+```dart
+TextField(
+  cursorColor: Theme.of(context).primaryColor,
+  decoration: const InputDecoration(hintText: "Username"),
+),
+```
+
+- hintText는 placeholder와 동일하다.
+
+# Controller
+
+- 코드, 메서드 등으로 위젯을 컨트롤 할 수 있게 해준다.
+  - statefulWidget에서 사용한다.
