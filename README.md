@@ -136,3 +136,31 @@ TextField(
 # dispose
 
 - 컨트롤러 객체가 제거될 때 변수에 할당 된 메모리를 해제하기 위해 사용한다.
+
+# Email의 정규표현식
+
+```
+r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+"
+```
+
+이메일이 정규표현식에 맞는지 확인
+
+```dart
+    final regExp = RegExp(
+        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+        if(!regExp.hasMatch(_email)){
+
+        }
+```
+
+# focus된 요소를 unfocus 시키기
+
+```dart
+void _onScaffoldTap() {
+    FocusScope.of(context).unfocus();
+  }
+```
+
+# onEditingComplete
+
+- 키보드에서 enter키를 눌렀을때의 동작을 정의할 수 있다.
