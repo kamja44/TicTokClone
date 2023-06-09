@@ -184,3 +184,7 @@ Form을 save하면 모든 텍스트 입력에 onSaved 콜백 함수를 실행하
   - 세로 영역의 갭을 조절한다.
 - spacing
   - 가로 영역의 갭을 조절한다.
+
+# AnimatedOpacity
+
+- 움직임에 따라서 투명도를 조절하는 widget이다.
