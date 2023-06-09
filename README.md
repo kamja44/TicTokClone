@@ -164,3 +164,11 @@ void _onScaffoldTap() {
 # onEditingComplete
 
 - 키보드에서 enter키를 눌렀을때의 동작을 정의할 수 있다.
+
+# Form의 Global Key
+
+- 고유 식별자와 같은 역할을 한다.
+- Global Key를 사용하면 폼의 state에 접근할 수 있다.
+- 폼의 메서드를 실행시킬 수 있다.
+
+Form을 save하면 모든 텍스트 입력에 onSaved 콜백 함수를 실행하게 된다.
