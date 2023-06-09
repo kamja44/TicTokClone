@@ -172,3 +172,15 @@ void _onScaffoldTap() {
 - 폼의 메서드를 실행시킬 수 있다.
 
 Form을 save하면 모든 텍스트 입력에 onSaved 콜백 함수를 실행하게 된다.
+
+# onBoarding
+
+- 유저가 가장 처음 앱을 실행했을 때 유저를 맞이하고 앱에 관해 설명해주는 방식이다.
+
+# Wrap
+
+- css의 wrap과 동일하다
+- runSpacing
+  - 세로 영역의 갭을 조절한다.
+- spacing
+  - 가로 영역의 갭을 조절한다.

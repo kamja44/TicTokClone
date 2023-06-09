@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
+import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
 
 void main() {
   runApp(const TikTokApp());
@@ -30,7 +30,9 @@ class TikTokApp extends StatelessWidget {
       ),
       home: const Padding(
         padding: EdgeInsets.all(Sizes.size14),
-        child: SignUpScreen(),
+        // 첫 화면 임시로 바꿈
+        // child: SignUpScreen(),
+        child: InterestsScreen(),
       ),
     );
   }
