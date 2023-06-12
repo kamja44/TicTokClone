@@ -28,8 +28,8 @@ class TikTokApp extends StatelessWidget {
               fontWeight: FontWeight.w800,
             )),
       ),
-      home: Padding(
-        padding: const EdgeInsets.all(Sizes.size14),
+      home: const Padding(
+        padding: EdgeInsets.all(Sizes.size14),
         // 첫 화면 임시로 바꿈
         // child: SignUpScreen(),
         child: MainNavigationScreen(),
