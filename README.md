@@ -230,3 +230,7 @@ Stack(
         ],
       ),
 ```
+
+# Positioned widget
+
+- Stack 내부의 element를 이동시킬 수 있게 해준다.
