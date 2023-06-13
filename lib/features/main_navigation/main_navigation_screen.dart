@@ -15,10 +15,14 @@ class MainNavigationScreen extends StatefulWidget {
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _selectedIndex = 0;
+  bool _onTapDown = false;
+  bool isSelected = true;
 
   void _onTap(int index) {
     setState(() {
       _selectedIndex = index;
+      _onTapDown = false;
+      isSelected = true;
     });
   }
 
@@ -33,6 +37,23 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         fullscreenDialog: true,
       ),
     );
+    setState(() {
+      _onTapDown = false;
+    });
+  }
+
+  void _onPostVideoButtonTapDown() {
+    {
+      setState(() {
+        if (_onTapDown) {
+          _onTapDown = false;
+          isSelected = true;
+        } else {
+          _onTapDown = true;
+          isSelected = false;
+        }
+      });
+    }
   }
 
   @override
@@ -67,36 +88,43 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             children: [
               NavTab(
                 text: "Home",
-                isSelected: _selectedIndex == 0,
+                isSelected: _selectedIndex == 0 && isSelected,
                 icon: FontAwesomeIcons.house,
                 selectedIcon: FontAwesomeIcons.house,
+                onTapDown: _onTapDown,
                 onTap: () => _onTap(0),
               ),
               NavTab(
                 text: "Discover",
-                isSelected: _selectedIndex == 1,
+                isSelected: _selectedIndex == 1 && isSelected,
                 icon: FontAwesomeIcons.magnifyingGlass,
                 selectedIcon: FontAwesomeIcons.solidCompass,
+                onTapDown: _onTapDown,
                 onTap: () => _onTap(1),
               ),
               Gaps.h24,
               GestureDetector(
-                onTap: _onPostVideoButtonTap,
-                child: const PostVideoButton(),
+                onTapDown: (details) => _onPostVideoButtonTapDown(),
+                onTapUp: (details) => _onPostVideoButtonTap(),
+                child: PostVideoButton(
+                  onTapDown: _onTapDown,
+                ),
               ),
               Gaps.h24,
               NavTab(
                 text: "Inbox",
-                isSelected: _selectedIndex == 3,
+                isSelected: _selectedIndex == 3 && isSelected,
                 icon: FontAwesomeIcons.message,
                 selectedIcon: FontAwesomeIcons.solidMessage,
+                onTapDown: _onTapDown,
                 onTap: () => _onTap(3),
               ),
               NavTab(
                 text: "Profile",
-                isSelected: _selectedIndex == 4,
+                isSelected: _selectedIndex == 4 && isSelected,
                 icon: FontAwesomeIcons.user,
                 selectedIcon: FontAwesomeIcons.solidUser,
+                onTapDown: _onTapDown,
                 onTap: () => _onTap(4),
               ),
             ],

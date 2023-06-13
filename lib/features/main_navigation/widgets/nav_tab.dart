@@ -10,6 +10,7 @@ class NavTab extends StatelessWidget {
     required this.icon,
     required this.onTap,
     required this.selectedIcon,
+    required this.onTapDown,
   });
 
   final String text;
@@ -17,6 +18,7 @@ class NavTab extends StatelessWidget {
   final IconData icon;
   final IconData selectedIcon;
   final Function onTap;
+  final bool onTapDown;
 
   @override
   Widget build(BuildContext context) {
