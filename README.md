@@ -188,3 +188,45 @@ Form을 save하면 모든 텍스트 입력에 onSaved 콜백 함수를 실행하
 # AnimatedOpacity
 
 - 움직임에 따라서 투명도를 조절하는 widget이다.
+
+# GlobalKey()
+
+- GlobalKey()를 이용하여 전부 다른화면임을 플러터에게 알려줄 수 있다.
+  - 즉, 플러터가 각 화면을 서로 다른 widget인 것 처럼 렌더링해준다.
+
+```dart
+final screens = [
+  StfScreen(key: GlobalKey()),
+  StfScreen(key: GlobalKey()),
+  Container(),
+  StfScreen(key: GlobalKey()),
+  StfScreen(key: GlobalKey()),
+]
+```
+
+# Offstage widget
+
+- widget이 안 보이게 하면서 계속 존재하게 해준다.
+
+```dart
+Stack(
+        children: [
+          Offstage(
+            offstage: _selectedIndex != 0,
+            child: const StfScreen(),
+          ),
+          Offstage(
+            offstage: _selectedIndex != 1,
+            child: const StfScreen(),
+          ),
+          Offstage(
+            offstage: _selectedIndex != 3,
+            child: const StfScreen(),
+          ),
+          Offstage(
+            offstage: _selectedIndex != 4,
+            child: const StfScreen(),
+          ),
+        ],
+      ),
+```
