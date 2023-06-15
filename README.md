@@ -234,3 +234,7 @@ Stack(
 # Positioned widget
 
 - Stack 내부의 element를 이동시킬 수 있게 해준다.
+
+# addAll
+
+한 리스트에 있는 모든 항목들을 다른 리스트에 추가한다.
