@@ -238,3 +238,29 @@ Stack(
 # addAll
 
 한 리스트에 있는 모든 항목들을 다른 리스트에 추가한다.
+
+# lib>features>videos>widgets>video_post.dart
+
+- Positioned.fill
+  - 화면 전체를 채우는 widget을 만든다.
+
+# StatefulWidget의 property를 state에서 접근하는 방법
+
+- widget을 통해 접근한다.
+  - widget.을 이용하여 위젯 자체에 접근할 수 있다.
+
+```dart
+  final Function onVideoFinished;
+
+  const VideoPost({
+    super.key,
+    required this.onVideoFinished,
+  });
+
+void dispose() {
+    _videoPlayerController.dispose();
+    super.dispose();
+
+    widget.onVideoFinished;
+  }
+```
