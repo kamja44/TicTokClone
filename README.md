@@ -296,3 +296,21 @@ class _VideoPostState extends State<VideoPost> with SinglePlayerProviderStateMix
 # CircleAvatar
 
 - 이미지가 들어있는 원을 제공한다.
+
+# RefreshIndicator
+
+- 유저가 당겨서 타임라인을 새로고침 할 때 사용하기 좋다.
+- onRefresh 메소드는 async를 하거나 future를 반환해야한다.
+
+```dart
+  Future<void> _onRefresh() {
+    return Future.delayed(
+      const Duration(seconds: 5),
+    );
+  }
+  RefreshIndicator(
+    controller: _pageController,
+  )
+```
+
+- Future.delayed를 사용하여 future가 있는 것처럼 동작 가능하다.
