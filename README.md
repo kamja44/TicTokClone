@@ -264,3 +264,7 @@ void dispose() {
     widget.onVideoFinished;
   }
 ```
+
+# IgnorePointer Widget
+
+- 이벤트를 무시한다.
