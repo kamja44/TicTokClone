@@ -85,6 +85,13 @@ class VideoPostState extends State<VideoPost>
     });
   }
 
+  bool _isTextTap = false;
+  void _onTapText() {
+    setState(() {
+      _isTextTap = !_isTextTap;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     print(_animationController.value);
@@ -129,13 +136,13 @@ class VideoPostState extends State<VideoPost>
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             bottom: 40,
             left: 10,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "@kamja",
                   style: TextStyle(
                     fontSize: Sizes.size20,
@@ -144,11 +151,25 @@ class VideoPostState extends State<VideoPost>
                   ),
                 ),
                 Gaps.v10,
-                Text(
+                const Text(
                   "This is my house in Thailand",
                   style: TextStyle(color: Colors.white, fontSize: Sizes.size14),
                 ),
                 Gaps.v10,
+                GestureDetector(
+                  onTap: _onTapText,
+                  child: SizedBox(
+                    width: 200,
+                    child: Text(
+                      "감자감자감자감자감자감자감자감자감자감자감자감자감자감자감자감자감자감자",
+                      maxLines: _isTextTap ? 3 : null,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
