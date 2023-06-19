@@ -268,3 +268,27 @@ void dispose() {
 # IgnorePointer Widget
 
 - 이벤트를 무시한다.
+
+# with SingleTickerProviderStateMixin
+
+- with 뒤에 mixin을 사용하면 그 클래스를 복사해오겠다는 의미이다.
+  - 클래스의 메서드와 속성 모두 복사
+  - 즉, 클래스를 확장할 필요가 없다.
+
+```dart
+class _VideoPostState extends State<VideoPost> with SinglePlayerProviderStateMixin{
+
+}
+```
+
+# SingleTickerProviderStateMixin
+
+- 애니메이션 controller가 하나만 있다면 SingleTickerProviderStateMixin을 사용한다.
+- 위젯이 화면에 보일 때만 Ticker를 제공한다.
+  - 즉, 위젯이 화면에 보여지고 있을 때만 tick하는 Ticker를 제공한다.
+  - Ticker은 애니메이션의 매 프레임마다 callback을 호출한다.
+- 즉, 위젯이 화면에 있을 때만 작동하게 한다.
+
+# TickerProvidertateMixin
+
+- 애니메이션 controller가 여러개 있다면 TickerProviderStateMixin을 사용한다.
