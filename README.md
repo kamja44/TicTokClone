@@ -292,3 +292,7 @@ class _VideoPostState extends State<VideoPost> with SinglePlayerProviderStateMix
 # TickerProvidertateMixin
 
 - 애니메이션 controller가 여러개 있다면 TickerProviderStateMixin을 사용한다.
+
+# CircleAvatar
+
+- 이미지가 들어있는 원을 제공한다.
