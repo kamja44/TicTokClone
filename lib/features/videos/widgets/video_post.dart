@@ -101,6 +101,7 @@ class VideoPostState extends State<VideoPost>
     }
     await showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       builder: (context) => const VideoComments(),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(Sizes.size16),
